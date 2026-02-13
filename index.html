@@ -1,0 +1,293 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jiejia Zhou's Questionnaire</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.5; margin: 24px; max-width: 900px; }
+    h1 { margin-bottom: 6px; }
+    .meta { color: #444; margin-top: 0; }
+    fieldset { margin: 18px 0; padding: 14px; }
+    legend { font-weight: 700; }
+    .row { margin: 10px 0; }
+    .scale { display: grid; grid-template-columns: 1fr; gap: 6px; margin-top: 6px; }
+    .option { display: inline-flex; align-items: center; gap: 8px; }
+    .small { font-size: 0.95em; color: #444; }
+    .req { color: #b00020; }
+    .btn { margin-top: 10px; padding: 10px 14px; font-size: 16px; }
+    .divider { height: 1px; background: #ddd; margin: 18px 0; }
+    .hint { background:#f7f7f7; padding:10px; border:1px solid #e3e3e3; }
+  </style>
+</head>
+<body>
+  <h1>Jiejia Zhou's Questionnaire</h1>
+  <p class="meta">COMP 3008 – Assignment 3 (Question 2) | Expedia mobile app (hotel search results)</p>
+
+  <div class="hint">
+    <p><strong>Task (do this first):</strong> On the Expedia mobile app, search Niagara Falls for 2 guests and a 2-night stay. Then try to find the <strong>total price (including taxes and fees)</strong> for a hotel on the results page (or by checking details if needed).</p>
+    <p class="small">After you finish the task, please answer the questions below. All questions are closed-ended.</p>
+  </div>
+
+  <!-- Netlify form -->
+  <form name="jiejia-zhou-questionnaire" method="POST" data-netlify="true" action="/success.html">
+    <input type="hidden" name="form-name" value="jiejia-zhou-questionnaire" />
+
+    <!-- Optional demographics (closed-ended, minimal) -->
+    <fieldset>
+      <legend>Participant Info (Optional)</legend>
+
+      <div class="row">
+        <label><strong>How often do you use hotel booking apps?</strong></label>
+        <div class="scale">
+          <label class="option"><input type="radio" name="booking_frequency" value="Never" /> Never</label>
+          <label class="option"><input type="radio" name="booking_frequency" value="Rarely" /> Rarely (a few times a year)</label>
+          <label class="option"><input type="radio" name="booking_frequency" value="Sometimes" /> Sometimes (monthly)</label>
+          <label class="option"><input type="radio" name="booking_frequency" value="Often" /> Often (weekly)</label>
+          <label class="option"><input type="radio" name="booking_frequency" value="Prefer not to say" /> Prefer not to say</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <label><strong>Have you used Expedia before?</strong></label>
+        <div class="scale">
+          <label class="option"><input type="radio" name="used_expedia" value="Yes" /> Yes</label>
+          <label class="option"><input type="radio" name="used_expedia" value="No" /> No</label>
+          <label class="option"><input type="radio" name="used_expedia" value="Not sure" /> Not sure</label>
+        </div>
+      </div>
+    </fieldset>
+
+    <div class="divider"></div>
+
+    <!-- SUS (10 items) -->
+    <fieldset>
+      <legend>System Usability Scale (SUS) <span class="req">*</span></legend>
+      <p class="small">For each statement, select one option: Strongly disagree → Strongly agree.</p>
+
+      <!-- Common Likert options -->
+      <!-- 1 -->
+      <div class="row">
+        <label><strong>1.</strong> I think that I would like to use this system frequently.</label>
+        <div class="scale">
+          <label class="option"><input required type="radio" name="sus1" value="1 Strongly disagree" /> Strongly disagree</label>
+          <label class="option"><input required type="radio" name="sus1" value="2 Disagree" /> Disagree</label>
+          <label class="option"><input required type="radio" name="sus1" value="3 Neutral" /> Neutral</label>
+          <label class="option"><input required type="radio" name="sus1" value="4 Agree" /> Agree</label>
+          <label class="option"><input required type="radio" name="sus1" value="5 Strongly agree" /> Strongly agree</label>
+        </div>
+      </div>
+
+      <!-- 2 (reverse) -->
+      <div class="row">
+        <label><strong>2.</strong> I found the system unnecessarily complex.</label>
+        <div class="scale">
+          <label class="option"><input required type="radio" name="sus2" value="1 Strongly disagree" /> Strongly disagree</label>
+          <label class="option"><input required type="radio" name="sus2" value="2 Disagree" /> Disagree</label>
+          <label class="option"><input required type="radio" name="sus2" value="3 Neutral" /> Neutral</label>
+          <label class="option"><input required type="radio" name="sus2" value="4 Agree" /> Agree</label>
+          <label class="option"><input required type="radio" name="sus2" value="5 Strongly agree" /> Strongly agree</label>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="row">
+        <label><strong>3.</strong> I thought the system was easy to use.</label>
+        <div class="scale">
+          <label class="option"><input required type="radio" name="sus3" value="1 Strongly disagree" /> Strongly disagree</label>
+          <label class="option"><input required type="radio" name="sus3" value="2 Disagree" /> Disagree</label>
+          <label class="option"><input required type="radio" name="sus3" value="3 Neutral" /> Neutral</label>
+          <label class="option"><input required type="radio" name="sus3" value="4 Agree" /> Agree</label>
+          <label class="option"><input required type="radio" name="sus3" value="5 Strongly agree" /> Strongly agree</label>
+        </div>
+      </div>
+
+      <!-- 4 (reverse) -->
+      <div class="row">
+        <label><strong>4.</strong> I think that I would need the support of a technical person to be able to use this system.</label>
+        <div class="scale">
+          <label class="option"><input required type="radio" name="sus4" value="1 Strongly disagree" /> Strongly disagree</label>
+          <label class="option"><input required type="radio" name="sus4" value="2 Disagree" /> Disagree</label>
+          <label class="option"><input required type="radio" name="sus4" value="3 Neutral" /> Neutral</label>
+          <label class="option"><input required type="radio" name="sus4" value="4 Agree" /> Agree</label>
+          <label class="option"><input required type="radio" name="sus4" value="5 Strongly agree" /> Strongly agree</label>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="row">
+        <label><strong>5.</strong> I found the various functions in this system were well integrated.</label>
+        <div class="scale">
+          <label class="option"><input required type="radio" name="sus5" value="1 Strongly disagree" /> Strongly disagree</label>
+          <label class="option"><input required type="radio" name="sus5" value="2 Disagree" /> Disagree</label>
+          <label class="option"><input required type="radio" name="sus5" value="3 Neutral" /> Neutral</label>
+          <label class="option"><input required type="radio" name="sus5" value="4 Agree" /> Agree</label>
+          <label class="option"><input required type="radio" name="sus5" value="5 Strongly agree" /> Strongly agree</label>
+        </div>
+      </div>
+
+      <!-- 6 (reverse) -->
+      <div class="row">
+        <label><strong>6.</strong> I thought there was too much inconsistency in this system.</label>
+        <div class="scale">
+          <label class="option"><input required type="radio" name="sus6" value="1 Strongly disagree" /> Strongly disagree</label>
+          <label class="option"><input required type="radio" name="sus6" value="2 Disagree" /> Disagree</label>
+          <label class="option"><input required type="radio" name="sus6" value="3 Neutral" /> Neutral</label>
+          <label class="option"><input required type="radio" name="sus6" value="4 Agree" /> Agree</label>
+          <label class="option"><input required type="radio" name="sus6" value="5 Strongly agree" /> Strongly agree</label>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="row">
+        <label><strong>7.</strong> I would imagine that most people would learn to use this system very quickly.</label>
+        <div class="scale">
+          <label class="option"><input required type="radio" name="sus7" value="1 Strongly disagree" /> Strongly disagree</label>
+          <label class="option"><input required type="radio" name="sus7" value="2 Disagree" /> Disagree</label>
+          <label class="option"><input required type="radio" name="sus7" value="3 Neutral" /> Neutral</label>
+          <label class="option"><input required type="radio" name="sus7" value="4 Agree" /> Agree</label>
+          <label class="option"><input required type="radio" name="sus7" value="5 Strongly agree" /> Strongly agree</label>
+        </div>
+      </div>
+
+      <!-- 8 (reverse) -->
+      <div class="row">
+        <label><strong>8.</strong> I found the system very cumbersome to use.</label>
+        <div class="scale">
+          <label class="option"><input required type="radio" name="sus8" value="1 Strongly disagree" /> Strongly disagree</label>
+          <label class="option"><input required type="radio" name="sus8" value="2 Disagree" /> Disagree</label>
+          <label class="option"><input required type="radio" name="sus8" value="3 Neutral" /> Neutral</label>
+          <label class="option"><input required type="radio" name="sus8" value="4 Agree" /> Agree</label>
+          <label class="option"><input required type="radio" name="sus8" value="5 Strongly agree" /> Strongly agree</label>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="row">
+        <label><strong>9.</strong> I felt very confident using the system.</label>
+        <div class="scale">
+          <label class="option"><input required type="radio" name="sus9" value="1 Strongly disagree" /> Strongly disagree</label>
+          <label class="option"><input required type="radio" name="sus9" value="2 Disagree" /> Disagree</label>
+          <label class="option"><input required type="radio" name="sus9" value="3 Neutral" /> Neutral</label>
+          <label class="option"><input required type="radio" name="sus9" value="4 Agree" /> Agree</label>
+          <label class="option"><input required type="radio" name="sus9" value="5 Strongly agree" /> Strongly agree</label>
+        </div>
+      </div>
+
+      <!-- 10 (reverse) -->
+      <div class="row">
+        <label><strong>10.</strong> I needed to learn a lot of things before I could get going with this system.</label>
+        <div class="scale">
+          <label class="option"><input required type="radio" name="sus10" value="1 Strongly disagree" /> Strongly disagree</label>
+          <label class="option"><input required type="radio" name="sus10" value="2 Disagree" /> Disagree</label>
+          <label class="option"><input required type="radio" name="sus10" value="3 Neutral" /> Neutral</label>
+          <label class="option"><input required type="radio" name="sus10" value="4 Agree" /> Agree</label>
+          <label class="option"><input required type="radio" name="sus10" value="5 Strongly agree" /> Strongly agree</label>
+        </div>
+      </div>
+    </fieldset>
+
+    <div class="divider"></div>
+
+    <!-- Task-specific closed-ended questionnaire (7+ items) -->
+    <fieldset>
+      <legend>Task-Specific Questionnaire <span class="req">*</span></legend>
+      <p class="small">Please answer based on the same task you just completed. Use the same 5-point scale.</p>
+
+      <!-- Likert: Strongly disagree..Strongly agree -->
+      <div class="row">
+        <label><strong>1.</strong> It was easy to find the total price (including taxes and fees).</label>
+        <div class="scale">
+          <label class="option"><input required type="radio" name="task1" value="1 Strongly disagree" /> Strongly disagree</label>
+          <label class="option"><input required type="radio" name="task1" value="2 Disagree" /> Disagree</label>
+          <label class="option"><input required type="radio" name="task1" value="3 Neutral" /> Neutral</label>
+          <label class="option"><input required type="radio" name="task1" value="4 Agree" /> Agree</label>
+          <label class="option"><input required type="radio" name="task1" value="5 Strongly agree" /> Strongly agree</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <label><strong>2.</strong> The total price was visually prominent on the results page.</label>
+        <div class="scale">
+          <label class="option"><input required type="radio" name="task2" value="1 Strongly disagree" /> Strongly disagree</label>
+          <label class="option"><input required type="radio" name="task2" value="2 Disagree" /> Disagree</label>
+          <label class="option"><input required type="radio" name="task2" value="3 Neutral" /> Neutral</label>
+          <label class="option"><input required type="radio" name="task2" value="4 Agree" /> Agree</label>
+          <label class="option"><input required type="radio" name="task2" value="5 Strongly agree" /> Strongly agree</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <label><strong>3.</strong> I felt confident that I understood which price was the final total cost.</label>
+        <div class="scale">
+          <label class="option"><input required type="radio" name="task3" value="1 Strongly disagree" /> Strongly disagree</label>
+          <label class="option"><input required type="radio" name="task3" value="2 Disagree" /> Disagree</label>
+          <label class="option"><input required type="radio" name="task3" value="3 Neutral" /> Neutral</label>
+          <label class="option"><input required type="radio" name="task3" value="4 Agree" /> Agree</label>
+          <label class="option"><input required type="radio" name="task3" value="5 Strongly agree" /> Strongly agree</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <label><strong>4.</strong> I had to open hotel detail pages to confirm the total price.</label>
+        <div class="scale">
+          <label class="option"><input required type="radio" name="task4" value="1 Strongly disagree" /> Strongly disagree</label>
+          <label class="option"><input required type="radio" name="task4" value="2 Disagree" /> Disagree</label>
+          <label class="option"><input required type="radio" name="task4" value="3 Neutral" /> Neutral</label>
+          <label class="option"><input required type="radio" name="task4" value="4 Agree" /> Agree</label>
+          <label class="option"><input required type="radio" name="task4" value="5 Strongly agree" /> Strongly agree</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <label><strong>5.</strong> The results page felt visually cluttered when comparing hotels.</label>
+        <div class="scale">
+          <label class="option"><input required type="radio" name="task5" value="1 Strongly disagree" /> Strongly disagree</label>
+          <label class="option"><input required type="radio" name="task5" value="2 Disagree" /> Disagree</label>
+          <label class="option"><input required type="radio" name="task5" value="3 Neutral" /> Neutral</label>
+          <label class="option"><input required type="radio" name="task5" value="4 Agree" /> Agree</label>
+          <label class="option"><input required type="radio" name="task5" value="5 Strongly agree" /> Strongly agree</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <label><strong>6.</strong> I could compare hotels efficiently without losing track of information.</label>
+        <div class="scale">
+          <label class="option"><input required type="radio" name="task6" value="1 Strongly disagree" /> Strongly disagree</label>
+          <label class="option"><input required type="radio" name="task6" value="2 Disagree" /> Disagree</label>
+          <label class="option"><input required type="radio" name="task6" value="3 Neutral" /> Neutral</label>
+          <label class="option"><input required type="radio" name="task6" value="4 Agree" /> Agree</label>
+          <label class="option"><input required type="radio" name="task6" value="5 Strongly agree" /> Strongly agree</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <label><strong>7.</strong> The filters helped me narrow down options without confusion.</label>
+        <div class="scale">
+          <label class="option"><input required type="radio" name="task7" value="1 Strongly disagree" /> Strongly disagree</label>
+          <label class="option"><input required type="radio" name="task7" value="2 Disagree" /> Disagree</label>
+          <label class="option"><input required type="radio" name="task7" value="3 Neutral" /> Neutral</label>
+          <label class="option"><input required type="radio" name="task7" value="4 Agree" /> Agree</label>
+          <label class="option"><input required type="radio" name="task7" value="5 Strongly agree" /> Strongly agree</label>
+        </div>
+      </div>
+
+      <!-- Attention check / reverse-coded style item (still closed-ended) -->
+      <div class="row">
+        <label><strong>8.</strong> I found it difficult to tell whether the displayed price included taxes and fees.</label>
+        <div class="scale">
+          <label class="option"><input required type="radio" name="task8" value="1 Strongly disagree" /> Strongly disagree</label>
+          <label class="option"><input required type="radio" name="task8" value="2 Disagree" /> Disagree</label>
+          <label class="option"><input required type="radio" name="task8" value="3 Neutral" /> Neutral</label>
+          <label class="option"><input required type="radio" name="task8" value="4 Agree" /> Agree</label>
+          <label class="option"><input required type="radio" name="task8" value="5 Strongly agree" /> Strongly agree</label>
+        </div>
+      </div>
+    </fieldset>
+
+    <button class="btn" type="submit">Submit</button>
+    <p class="small">By submitting, you confirm you are participating voluntarily and that your responses will be used for course assignment analysis.</p>
+  </form>
+</body>
+</html>
